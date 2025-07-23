@@ -1,0 +1,114 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    max-width: 900px;
+}
+
+.calculator {
+    flex: 2;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    width: 100%;
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#input {
+    width: 100%;
+    font-size: 2rem;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: #2a2a2a;
+    color: #fff;
+}
+
+.toggle-mode {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 15px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #3a3a3a;
+    color: white;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: #505050;
+}
+
+.history {
+    flex: 1;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 12px;
+    max-height: 100%;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.history h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+#history-list {
+    list-style: none;
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+#history-list li {
+    padding: 5px 0;
+    border-bottom: 1px solid #333;
+    font-size: 0.95rem;
+    color: #ccc;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
